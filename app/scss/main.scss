@@ -59,6 +59,7 @@ body {
       background-color: $white_color;
       border-left: 0.4rem solid $desaturated_dark_cyan_color;
       border-radius: 0.4rem;
+      box-shadow: 0.5rem 0.5rem 2rem -1rem $desaturated_dark_cyan_color;
 
       img {
         margin-right: 2rem;
