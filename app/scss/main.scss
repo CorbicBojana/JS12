@@ -1,0 +1,134 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "fonts";
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: "Spartan", sans-serif;
+}
+
+.container {
+  width: 112rem;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.col {
+  width: 100%;
+}
+
+.col_2 {
+  width: 50%;
+}
+
+// HEADER 
+.header {
+  width: 100%;
+  height: 15rem;
+  background: url("../../dist/images/bg-header-desktop.svg") $desaturated_dark_cyan_color;
+}
+
+// MAIN 
+.main {
+  padding: 7rem 16rem;
+  background-color: $background_color;
+
+  .row {
+
+    .col {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      padding: 3rem;
+      background-color: $white_color;
+      border-left: 0.4rem solid $desaturated_dark_cyan_color;
+      border-radius: 0.4rem;
+
+      img {
+        margin-right: 2rem;
+      }
+
+      .row {
+        justify-content: space-between;
+        width: calc(100% - 11rem);
+
+        .col_2 {
+
+          h2 {
+            display: flex;
+            align-items: center;
+            color: $desaturated_dark_cyan_color;
+            font-size: 1.6rem;
+            font-weight: 700;
+
+            span {
+              display: inline-block;
+              margin-left: 1.5rem;
+              padding: 1rem;
+              color: $white_color;
+              background-color: $desaturated_dark_cyan_color;
+              border-radius: 2rem;
+              font-size: 1.2rem;
+              text-transform: uppercase;
+            }
+          }
+
+          h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+          }
+
+          h1, h2 {
+            margin-bottom: 1rem;
+          }
+
+          .list {
+            display: flex;
+
+            .list_item {
+              margin: 0 1.5rem;
+              color: $dark_grayish_cyan_color;
+              list-style: disc;
+
+              &:first-child {
+                margin: 0 1.5rem 0 0;
+                list-style: none;
+              }
+            }
+          }
+
+          .primary_list {
+            justify-content: flex-end;
+            font-weight: 700;
+
+            .primary_list_item {
+              margin-left: 1.5rem;
+              padding: 1rem;
+              color: $desaturated_dark_cyan_color;
+              background-color: $background_color;
+              border-radius: 0.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "media";
