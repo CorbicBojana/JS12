@@ -136,6 +136,8 @@ body {
           border-radius: 2rem;
           font-size: 1.2rem;
           text-transform: uppercase; }
+        .main .row .col .row .col_2 h2 .span_bg {
+          background-color: #2c3a3a; }
       .main .row .col .row .col_2 h1 {
         font-size: 1.8rem;
         font-weight: 700; }
