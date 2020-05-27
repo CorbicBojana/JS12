@@ -172,12 +172,14 @@ body {
     width: 100%; }
   .header .header_container {
     margin: 0 2.5rem; }
+    .header .header_container .form .form_input {
+      padding: 2rem; }
   .main {
     padding: 5rem 2.5rem; }
     .main .row .col {
       position: relative;
       margin-top: 3rem;
-      padding: 3rem 2rem; }
+      padding: 3rem 2rem 1.5rem; }
       .main .row .col img {
         width: 5rem;
         position: absolute;
