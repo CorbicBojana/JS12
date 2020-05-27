@@ -3,4 +3,53 @@
     .col_2 {
         width: 100%;
     }
+
+    .header {
+
+        .header_container {
+            margin: 0 2.5rem;
+        }
+    }
+
+    .main {
+        padding: 5rem 2.5rem;
+
+        .row {
+
+            .col {
+                position: relative;
+                margin-top: 3rem;
+                padding: 3rem 2rem;
+
+                img {
+                    width: 5rem;
+                    position: absolute;
+                    top: -2.5rem;
+                    left: 2rem;
+                }
+
+                .row {
+                    width: 100%;
+
+                    .col_2 {
+                        
+                        .border_bottom {
+                            margin-bottom: 2rem;
+                            padding-bottom: 2rem;
+                            border-bottom: 0.1rem solid $dark_grayish_cyan_color;
+                        }
+
+                        .primary_list {
+                            flex-wrap: wrap;
+                            justify-content: flex-start;
+
+                            .primary_list_item {
+                                margin: 0 1.5rem 1.5rem 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
