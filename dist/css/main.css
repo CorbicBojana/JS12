@@ -105,6 +105,7 @@ body {
         outline: none; }
 
 .main {
+  height: calc(100vh - 15rem);
   padding: 7rem 16rem;
   background-color: #effafa; }
   .main .row .border_left {

@@ -176,7 +176,7 @@ const data =
       "tools": ["React", "Sass"],
       "logo": "./images/the-air-filter-company.svg"
   }
-]
+];
 
 const getData = data.map(index => {
     row.innerHTML += `<div class="col border_left">
@@ -230,7 +230,59 @@ form.addEventListener("submit", (e) => {
 });
 
 formInput.addEventListener("change", (e) => {
-  console.log(e.target.value);
+
+  let filterItem = e.target.value.toLowerCase();
+
+  row.innerHTML = "";
+
+  const newItem = data.filter((value) => {
+    return value.company.toLowerCase() === filterItem 
+  })
+
+  row.innerHTML = `<div class="col border_left">
+
+      <img src=${newItem[0].logo} alt="${newItem[0].company}" />
+
+      <div class="row">
+
+        <div class="col_2">
+
+          <h2>${newItem[0].company}
+              ${newItem[0].new ? `<span>New!</span>` : ``}
+              ${newItem[0].featured ? `<span class="span_bg">Featured</span>` : ``}
+          </h2>
+
+          <h1>${newItem[0].position}</h1>
+
+          <ul class="list border_bottom">
+            ${newItem[0].positionDetails.reduce((acc, curr) => 
+              {
+                return acc + `<li class="list_item">${curr}</li>`;
+              }, "")}
+          </ul>
+
+        </div> 
+      
+        <div class="col_2">
+
+          <ul class="list primary_list">
+              <li class="primary_list_item">${newItem[0].role}</li>
+              <li class="primary_list_item">${newItem[0].level}</li>
+              ${newItem[0].languages.reduce((acc, curr) => 
+                {
+                  return acc + `<li class="primary_list_item">${curr}</li>`;
+                }, "")}
+              ${newItem[0].tools.reduce((acc, curr) => 
+                {
+                  return acc + `<li class="primary_list_item">${curr}</li>`;
+                }, "")}
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>`;
 });
 
 button.addEventListener("click", (e) => {
