@@ -1,4 +1,4 @@
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1200px) {
 
     .col_2 {
         width: 100%;
@@ -58,5 +58,19 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 800px) {
+
+    .header {
+
+        .header_container {
+            margin: 0 7rem;
+        }
+    }
+
+    .main {
+        padding: 7rem 7rem;
     }
 }
